@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_track_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif-condensed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@tools:sample/cities" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_track"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_track_name"
+        tools:src="@tools:sample/avatars" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_artist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:fontFamily="sans-serif-condensed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_track"
+        app:layout_constraintTop_toTopOf="@+id/img_track"
+        tools:text="@tools:sample/full_names" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:fontFamily="sans-serif-condensed"
+        app:layout_constraintStart_toStartOf="@+id/txt_artist"
+        app:layout_constraintTop_toBottomOf="@+id/txt_artist"
+        tools:text="USD 9.99" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:fontFamily="sans-serif-condensed"
+        app:layout_constraintStart_toStartOf="@+id/txt_price"
+        app:layout_constraintTop_toBottomOf="@+id/txt_price"
+        tools:text="Action" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_release_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:fontFamily="sans-serif-condensed"
+        app:layout_constraintStart_toStartOf="@+id/txt_genre"
+        app:layout_constraintTop_toBottomOf="@+id/txt_genre"
+        tools:text="@tools:sample/date/ddmmyy" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_description"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:ellipsize="end"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:fontFamily="sans-serif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_track"
+        tools:text="@tools:sample/lorem/random" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
