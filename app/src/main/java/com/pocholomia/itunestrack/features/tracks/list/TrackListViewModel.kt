@@ -42,9 +42,9 @@ class TrackListViewModel @Inject constructor(
         when (change) {
             is Change.SetTracks -> state.copy(tracks = change.tracks, isLoading = false)
             is Change.SetLoading -> state.copy(isLoading = change.isLoading)
-            is Change.Error -> state.copy(error = SingleEvent(
-                change.error
-            )
+            is Change.Error -> state.copy(
+                error = SingleEvent(change.error),
+                isLoading = false
             )
         }
     }
