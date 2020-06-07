@@ -43,6 +43,7 @@ class TracksUseCaseImpl constructor(
     override fun refreshTracks(): Single<List<Track>> = trackService.getTracks()
         .flatMap { response ->
             val list = response.tracks.map { it.toTrackDto }
+            trackDao.deleteAll()
             trackDao.saveAll(*list.toTypedArray())
                 .map { list.map { it.toTrack } }
         }
